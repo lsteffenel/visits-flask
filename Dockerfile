@@ -2,7 +2,7 @@
 FROM alpine:latest
 
 # Install python and pip
-RUN apk add --update py2-pip
+RUN apk add --update py3-pip
 
 # upgrade pip
 RUN pip install --upgrade pip
@@ -18,4 +18,4 @@ COPY app.py /usr/src/app/
 EXPOSE 80
 
 # run the application
-CMD ["python", "/usr/src/app/app.py"]
+CMD ["python3", "/usr/src/app/app.py"]
