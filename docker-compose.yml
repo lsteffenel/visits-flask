@@ -2,7 +2,7 @@ version: "3"
 services:
   web:
     # replace username/repo:tag with your name and image details
-    image: MYNAME/visits-flask
+    image: lsteffenel/visits-flask
     deploy:
       replicas: 1
       restart_policy:

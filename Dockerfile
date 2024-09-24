@@ -2,14 +2,14 @@
 FROM alpine:latest
 
 # Install python and pip
-RUN apk add --update py3-pip
+RUN apk add --no-cache python3 py3-pip py3-flask py3-redis
 
 # upgrade pip
-RUN pip install --upgrade pip
+#RUN pip3 install --upgrade pip3
 
 # install Python modules needed by the Python app
 COPY requirements.txt /usr/src/app/
-RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
+#RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
 
 # copy files required for the app to run
 COPY app.py /usr/src/app/
